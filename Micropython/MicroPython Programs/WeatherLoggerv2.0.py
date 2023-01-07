@@ -1026,8 +1026,6 @@ while True:
     
     utime.sleep(0.2)
 
-class Graph:
-    pass
 
 
 
