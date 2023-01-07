@@ -95,7 +95,7 @@ class Data:
         for _ in range(0, points):
             self.red = ((graph_y-1) / (self.u - self.l)) * (self.data_limit[_] - self.l)
             self.r = round(self.red)
-            self.data_list[_]=self.r
+            self.data[_]=self.r
 
         if self.data_limit[points-1] is max(self.data_limit):
             self.rate=0
@@ -268,6 +268,7 @@ def reading_log():
     print("Pres:",avg_p," Pa")
     print("Hum:",avg_h," %")
     
+
 def graph_func(pot_red, graph_list):
     auto_esc=0
     while True:
@@ -331,6 +332,7 @@ def graph_func(pot_red, graph_list):
         auto_esc += 1
         if button_a.value()==0 or auto_esc > 100:
             return pot_red
+
 
 def disp_pressure(pot_red):    
     oled.fill(0)
