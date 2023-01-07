@@ -32,3 +32,9 @@ def localvar():
 localvar()
 print("********")
 print(p.lst)
+
+def testing(var):
+    print(var)
+print("********")
+print("********")
+testing(p.lst)
