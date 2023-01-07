@@ -1,12 +1,12 @@
 from machine import Pin, I2C, ADC
 from ssd1306 import SSD1306_I2C
-from lcd_api import LcdApi
+#from lcd_api import LcdApi
 from pico_i2c_lcd import I2cLcd
 from ds3231 import DS3231_I2C
 from bmp180 import BMP180
 from htu21d import HTU21D
 import uasyncio as asyncio
-import framebuf
+#import framebuf
 import utime
 import math
 
