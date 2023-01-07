@@ -268,26 +268,11 @@ def reading_log():
     print("Pres:",avg_p," Pa")
     print("Hum:",avg_h," %")
     
-
-def disp_pressure(pot_red):    
-    oled.fill(0)
-    oled.fill_rect( 1, 27, 127, 11, 1)
-    oled.text("Pressure",32,29,0)
-    oled.show()
-    
-    utime.sleep(0.1)    
-    
-    lcd.clear()
-    lcd.move_to(0,0)
-    lcd.putstr("P:"+str(pdata_list_limit[points-1])+" Pa")
-    lcd.move_to(0,1)
-    lcd.putstr(" "+chr(5)+str(max(pdata_list_limit))+"  "+chr(6)+str(min(pdata_list_limit)))
-    
+def graph_func(pot_red, graph_list):
     auto_esc=0
     while True:
         oled.fill(0)    
         pot_value=pot_y.read_u16()
-        pot_opt=pot_x.read_u16()
         if pot_value < pot_lower:
             pot_red=pot_red-(2)
             auto_esc=0
@@ -310,7 +295,7 @@ def disp_pressure(pot_red):
             if n%2==0:
                 n_sub=round(n/2)
                 if n_sub<points:
-                    oled.pixel(127-n_red, 63-pdata_list[points-1-n_sub]-7, 1)
+                    oled.pixel(127-n_red, 63-graph_list[points-1-n_sub]-7, 1)
                 if graph_data[n_sub]==1:
                     oled.pixel(127-n_red, 63, 1)
                     oled.pixel(127-n_red, 0, 1)
@@ -334,7 +319,7 @@ def disp_pressure(pot_red):
                     oled.pixel(127-n_red, 4, 1)
             else:
                 if n<((2*points)-2):                    
-                    int_value=(pdata_list[points-1-round(((n-1)/2)+1)]+pdata_list[points-1-round(((n-3)/2)+1)])/2
+                    int_value=(graph_list[points-1-round(((n-1)/2)+1)]+graph_list[points-1-round(((n-3)/2)+1)])/2
                     int_value=round(int_value)
                     oled.pixel(127-n_red, 63-int_value-7, 1)
         
@@ -346,6 +331,24 @@ def disp_pressure(pot_red):
         auto_esc += 1
         if button_a.value()==0 or auto_esc > 100:
             return pot_red
+
+def disp_pressure(pot_red):    
+    oled.fill(0)
+    oled.fill_rect( 1, 27, 127, 11, 1)
+    oled.text("Pressure",32,29,0)
+    oled.show()
+    
+    utime.sleep(0.1)    
+    
+    lcd.clear()
+    lcd.move_to(0,0)
+    lcd.putstr("P:"+str(pressure.data_limit[points-1])+" Pa")
+    lcd.move_to(0,1)
+    lcd.putstr(" "+chr(5)+str(max(pressure.data_limit))+"  "+chr(6)+str(min(pressure.data_limit)))
+
+    pot_red=graph_func(pot_red, pressure.data)
+
+    return pot_red   
 
 
 def disp_temp(pot_red):  
@@ -358,75 +361,15 @@ def disp_temp(pot_red):
     
     lcd.clear()
     lcd.move_to(0,0)
-    lcd.putstr("T:"+str(tdata_list_limit[points-1])+chr(223)+"C")
+    lcd.putstr("T:"+str(temperature.data_limit[points-1])+chr(223)+"C")
     lcd.move_to(0,1)
-    lcd.putstr(" "+chr(5)+str(max(tdata_list_limit)))
+    lcd.putstr(" "+chr(5)+str(max(temperature.data_limit)))
     lcd.move_to(9,1)
-    lcd.putstr(chr(6)+str(min(tdata_list_limit)))
+    lcd.putstr(chr(6)+str(min(temperature.data_limit)))
         
-    auto_esc=0
-    while True:
-        oled.fill(0)    
-        pot_value=pot_y.read_u16()
-        pot_opt=pot_x.read_u16()
-        if pot_value < pot_lower:
-            pot_red=pot_red-(2)
-            auto_esc=0
-        if pot_value > pot_higher:
-            pot_red=pot_red+(2)
-            auto_esc=0
-        if pot_red < 0:
-            pot_red=0
-        if pot_red>100:
-            pot_red=100
-        if pot_red<26:
-            pot_red=26
-        ctr=-1
-        for n in range(0,(points*2)+1):
-            n_red=(n*pot_red)/100
-            n_red=round(n_red)
-            if (127-n_red) < 0:
-                break
-            
-            if n%2==0:
-                n_sub=round(n/2)
-                if n_sub<points:
-                    oled.pixel(127-n_red, 63-tdata_list[points-1-n_sub]-7, 1)
-                if graph_data[n_sub]==1:
-                    oled.pixel(127-n_red, 63, 1)
-                    oled.pixel(127-n_red, 0, 1)
-                if graph_data[n_sub]==2:
-                    ctr+=1
-                    oled.pixel(127-n_red, 62, 1)
-                    oled.pixel(127-n_red, 61, 1)
-                    oled.pixel(127-n_red, 1, 1)
-                    oled.pixel(127-n_red, 2, 1)
-                if graph_data[n_sub]==3:
-                    ctr+=1
-                    oled.pixel(127-n_red, 63, 1)
-                    oled.pixel(127-n_red, 62, 1)
-                    oled.pixel(127-n_red, 61, 1)
-                    oled.pixel(127-n_red, 60, 1)
-                    oled.pixel(127-n_red, 59, 1)
-                    oled.pixel(127-n_red, 0, 1)
-                    oled.pixel(127-n_red, 1, 1)
-                    oled.pixel(127-n_red, 2, 1)
-                    oled.pixel(127-n_red, 3, 1)
-                    oled.pixel(127-n_red, 4, 1)
-            else:
-                if n<((2*points)-2):                    
-                    int_value=(tdata_list[points-1-round(((n-1)/2)+1)]+tdata_list[points-1-round(((n-3)/2)+1)])/2
-                    int_value=round(int_value)
-                    oled.pixel(127-n_red, 63-int_value-7, 1)
-        
-        lcd.move_to(12,0)
-        lcd.putstr(str(ctr)+"h ")
-        
-        oled.show()
-        utime.sleep(0.05)
-        auto_esc += 1
-        if button_a.value()==0 or auto_esc > 100:
-            return pot_red
+    pot_red=graph_func(pot_red, temperature.data)
+
+    return pot_red  
 
 
 def disp_hum(pot_red):
@@ -439,72 +382,13 @@ def disp_hum(pot_red):
     
     lcd.clear()
     lcd.move_to(0,0)
-    lcd.putstr("H:"+str(hdata_list_limit[points-1])+" %")
+    lcd.putstr("H:"+str(humidity.data_limit[points-1])+" %")
     lcd.move_to(0,1)
-    lcd.putstr(" "+chr(5)+str(max(hdata_list_limit))+"  "+chr(6)+str(min(hdata_list_limit)))    
+    lcd.putstr(" "+chr(5)+str(max(humidity.data_limit))+"  "+chr(6)+str(min(humidity.data_limit)))    
 
-    auto_esc=0
-    while True:
-        oled.fill(0)    
-        pot_value=pot_y.read_u16()
-        pot_opt=pot_x.read_u16()
-        if pot_value < pot_lower:
-            pot_red=pot_red-(2)
-            auto_esc=0
-        if pot_value > pot_higher:
-            pot_red=pot_red+(2)
-            auto_esc=0
-        if pot_red < 0:
-            pot_red=0
-        if pot_red>100:
-            pot_red=100
-        if pot_red<26:
-            pot_red=26
-        ctr=-1    
-        for n in range(0,(points*2)+1):
-            n_red=(n*pot_red)/100
-            n_red=round(n_red)
-            if (127-n_red) < 0:
-                break
-            if n%2==0:
-                n_sub=round(n/2)
-                if n_sub<points:
-                    oled.pixel(127-n_red, 63-hdata_list[points-1-n_sub]-7, 1)
-                if graph_data[n_sub]==1:
-                    oled.pixel(127-n_red, 63, 1)
-                    oled.pixel(127-n_red, 0, 1)
-                if graph_data[n_sub]==2:
-                    ctr+=1
-                    oled.pixel(127-n_red, 62, 1)
-                    oled.pixel(127-n_red, 61, 1)
-                    oled.pixel(127-n_red, 1, 1)
-                    oled.pixel(127-n_red, 2, 1)
-                if graph_data[n_sub]==3:
-                    ctr+=1
-                    oled.pixel(127-n_red, 63, 1)
-                    oled.pixel(127-n_red, 62, 1)
-                    oled.pixel(127-n_red, 61, 1)
-                    oled.pixel(127-n_red, 60, 1)
-                    oled.pixel(127-n_red, 59, 1)
-                    oled.pixel(127-n_red, 0, 1)
-                    oled.pixel(127-n_red, 1, 1)
-                    oled.pixel(127-n_red, 2, 1)
-                    oled.pixel(127-n_red, 3, 1)
-                    oled.pixel(127-n_red, 4, 1)
-            else:
-                if n<((2*points)-2):                    
-                    int_value=(hdata_list[points-1-round(((n-1)/2)+1)]+hdata_list[points-1-round(((n-3)/2)+1)])/2
-                    int_value=round(int_value)
-                    oled.pixel(127-n_red, 63-int_value-7, 1)
-        
-        lcd.move_to(12,0)
-        lcd.putstr(str(ctr)+"h ")
-        
-        oled.show()
-        utime.sleep(0.05)
-        auto_esc += 1
-        if button_a.value()==0 or auto_esc > 100:
-            return pot_red
+    pot_red=graph_func(pot_red, humidity.data)
+
+    return pot_red
         
 
 def lcd_display():      
