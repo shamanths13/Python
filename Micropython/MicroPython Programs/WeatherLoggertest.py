@@ -69,6 +69,46 @@ n = 0
 points = 240
 
 
+class Data:
+    def __init__(self,read,buff):
+        self.read = read
+        self.buff=buff
+        self.rate=243
+        self.data=[0]
+        for _ in range(1, points):
+            self.data.append(0)
+
+        self.data_limit=[read]
+        for _ in range(1, points):
+            self.data_limit.append(read)
+        self.data_limit[1]=self.read - self.buff
+        self.data_limit[2]=self.read + self.buff
+    
+    def log(self, avg):
+        for _ in range(0, points-1):
+            self.data_limit[_]=self.data_limit[_+1]
+        self.data_limit[points-1] = avg
+
+        self.l = min(self.data_limit) - self.buff
+        self.u = max(self.data_limit) + self.buff
+
+        for _ in range(0, points):
+            self.red = ((graph_y-1) / (self.u - self.l)) * (self.data_limit[_] - self.l)
+            self.r = round(self.red)
+            self.data_list[_]=self.r
+
+        if self.data_limit[points-1] is max(self.data_limit):
+            self.rate=0
+        elif self.data_limit[points-1] is min(self.data_limit):
+            self.rate=1
+        elif self.data_limit[points-1] > self.data_limit[points-2]:
+            self.rate=2
+        elif self.data_limit[points-1] < self.data_limit[points-2]:
+            self.rate=3
+        else:
+            self.rate=243
+
+
 async def temp_read():
         await htu
         return htu.temperature
@@ -97,12 +137,9 @@ def logfreq_set(temp_log_freq):
     global log_counter
     global log_freq
     global graph_data
-    global pdata_list
-    global pdata_list_limit
-    global tdata_list
-    global tdata_list_limit
-    global hdata_list
-    global hdata_list_limit
+    global pressure
+    global temperature
+    global humidity
     global read_p
     global read_t
     global read_h
@@ -112,9 +149,6 @@ def logfreq_set(temp_log_freq):
     global hr_prev
     global read
     global incr
-    global p_rate
-    global t_rate
-    global h_rate
     
     log_freq = temp_log_freq
     grid_locxspace = round(60/log_freq)
@@ -139,40 +173,13 @@ def logfreq_set(temp_log_freq):
             count_graph_bigseg=count_graph_bigseg-1
             
     graph_data.append(3)    
-    
+
     reading()
-
-    pdata_list=[0]
-    for n in range(1, points):
-        pdata_list.append(0)
-
-    pdata_list_limit=[pres]
-    for n in range(1, points):
-        pdata_list_limit.append(pres)
-    pdata_list_limit[1]=pres-1
-    pdata_list_limit[2]=pres+1
+    pressure=Data(pres, 1)
     read_p = pres
-
-    tdata_list=[0]
-    for n in range(1, points):
-        tdata_list.append(0)
-
-    tdata_list_limit=[temp]
-    for n in range(1, points):
-        tdata_list_limit.append(temp)
-    tdata_list_limit[1]=temp-0.1
-    tdata_list_limit[2]=temp+0.1
+    temperature=Data(temp, 0.1)
     read_t = temp
-
-    hdata_list=[0]
-    for n in range(1, points):
-        hdata_list.append(0)
-
-    hdata_list_limit=[hum]
-    for n in range(1, points):
-        hdata_list_limit.append(hum)
-    hdata_list_limit[1]=hum-0.1
-    hdata_list_limit[2]=hum+0.1
+    humidity=Data(hum, 0.1)
     read_h = hum
 
     read_n = 1
@@ -181,9 +188,6 @@ def logfreq_set(temp_log_freq):
     hr_prev=24
     read=1
     incr=0
-    p_rate=243
-    t_rate=243
-    h_rate=243
     
 
 def initialize():
@@ -251,92 +255,19 @@ def initialize():
 
 
 def reading_log():
-    global pdata_list
-    global pdata_list_limit
-    global tdata_list
-    global tdata_list_limit
-    global hdata_list
-    global hdata_list_limit
-    global p_rate
-    global t_rate
-    global h_rate
-            
-    for n in range(0, points-1):
-        pdata_list_limit[n]=pdata_list_limit[n+1]
-    pdata_list_limit[points-1] = avg_p
-            
-    p_l = min(pdata_list_limit)-1
-    p_u = max(pdata_list_limit)+1    
-               
-    for n in range(0, points):
-        red_pres = ((graph_y-1) / (p_u - p_l)) * (pdata_list_limit[n] - p_l)
-        p_r = round(red_pres)
-        pdata_list[n]=p_r
+    global pressure
+    global temperature
+    global humidity
 
-            
-    for n in range(0, points-1):
-        tdata_list_limit[n]=tdata_list_limit[n+1]
-    tdata_list_limit[points-1] = avg_t
-            
-    t_l = min(tdata_list_limit)-0.01
-    t_u = max(tdata_list_limit)+0.01    
-               
-    for n in range(0, points):
-        red_temp = ((graph_y-1) / (t_u - t_l)) * (tdata_list_limit[n] - t_l)
-        t_r = round(red_temp)
-        tdata_list[n]=t_r
-    
-    
-    for n in range(0, points-1):
-        hdata_list_limit[n]=hdata_list_limit[n+1]
-    hdata_list_limit[points-1] = avg_h
-            
-    h_l = min(hdata_list_limit)-0.01
-    h_u = max(hdata_list_limit)+0.01    
-               
-    for n in range(0, points):
-        red_hum = ((graph_y-1) / (h_u - h_l)) * (hdata_list_limit[n] - h_l)
-        h_r = round(red_hum)
-        hdata_list[n]=h_r
+    pressure.log(avg_p)
+    temperature.log(avg_t)
+    humidity.log(avg_h)
                 
     print("Log Time:%02x:%02x:%02x" %(t[2],t[1],t[0]))
     print("Temp:",avg_t," C")
     print("Pres:",avg_p," Pa")
     print("Hum:",avg_h," %")
     
-    if pdata_list_limit[points-1] == max(pdata_list_limit):
-        p_rate=0
-    elif pdata_list_limit[points-1] == min(pdata_list_limit):
-        p_rate=1
-    elif pdata_list_limit[points-1] > pdata_list_limit[points-2]:
-        p_rate=2
-    elif pdata_list_limit[points-1] < pdata_list_limit[points-2]:
-        p_rate=3
-    else:
-        p_rate=243
-        
-    if tdata_list_limit[points-1] == max(tdata_list_limit):
-        t_rate=0
-    elif tdata_list_limit[points-1] == min(tdata_list_limit):
-        t_rate=1
-    elif tdata_list_limit[points-1] > tdata_list_limit[points-2]:
-        t_rate=2
-    elif tdata_list_limit[points-1] < tdata_list_limit[points-2]:
-        t_rate=3
-    else:
-        t_rate=243
-    
-    if hdata_list_limit[points-1] == max(hdata_list_limit):
-        h_rate=0
-    elif hdata_list_limit[points-1] == min(hdata_list_limit):
-        h_rate=1
-    elif hdata_list_limit[points-1] > hdata_list_limit[points-2]:
-        h_rate=2
-    elif hdata_list_limit[points-1] < hdata_list_limit[points-2]:
-        h_rate=3
-    else:
-        h_rate=243
-
 
 def disp_pressure(pot_red):    
     oled.fill(0)
@@ -575,15 +506,16 @@ def disp_hum(pot_red):
         if button_a.value()==0 or auto_esc > 100:
             return pot_red
         
+
 def lcd_display():      
     lcd.move_to(0,0)
     lcd.putstr(day+" %02x:%02x:%02x" %(t[2],t[1],t[0]))
     lcd.move_to(13,0)
-    lcd.putstr("Pr"+ chr(p_rate))
+    lcd.putstr("Pr"+ chr(pressure.rate))
     lcd.move_to(0,1)    
-    lcd.putstr(chr(t_rate)+'{0:.2f}'.format(temp)+chr(223)+"C")
+    lcd.putstr(chr(temperature.rate)+'{0:.2f}'.format(temp)+chr(223)+"C")
     lcd.move_to(9,1)
-    lcd.putstr(chr(h_rate)+'{0:.2f}'.format(hum)+"%")
+    lcd.putstr(chr(humidity.rate)+'{0:.2f}'.format(hum)+"%")
 
 
 def set_day():
@@ -618,6 +550,7 @@ def oled_menu():
     oled.hline(61,8,5,1)
     oled.hline(60,9,7,1)
     oled.hline(59,10,9,1)
+
 
 def lcd_dispmenu():
     lcd.clear()
@@ -1026,8 +959,7 @@ while True:
     
     utime.sleep(0.2)
 
-class Graph:
-    pass
+
 
 
 
