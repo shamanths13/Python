@@ -103,7 +103,7 @@ tabview.grid(row=0, padx=0, pady=00)
 tab1=tabview.add("+")
 tab1.grid_columnconfigure(0, weight=1)
 
-label_1 = customtkinter.CTkLabel(tab1,text="NOVA'S TO DO LIST" ,font=('Arial', 22,"bold"))
+label_1 = customtkinter.CTkLabel(tab1,text="TO DO LIST" ,font=('Arial', 22,"bold"))
 label_1.pack(pady=(0,10), padx=0)
 
 entrytab = customtkinter.CTkEntry(tab1,width=360,height=36,corner_radius=8,font=('Arial', 20,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Enter a new list name here")
