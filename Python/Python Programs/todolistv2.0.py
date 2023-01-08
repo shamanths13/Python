@@ -5,7 +5,7 @@ customtkinter.set_default_color_theme("dark-blue")
 
 root=customtkinter.CTk()
 root.geometry("400x600")
-root.title("Nova's ToDo List")
+root.title("To Do List")
 #root.iconbitmap(resource_path("chaosicon.ico"))
 root.resizable(False,False)
 
@@ -181,7 +181,6 @@ textbox.insert("2.0", "Click the upper right corner to exit. ")
 textbox.insert("3.0", "Click and drag the upper left corner to move the pad. ")
 textbox.insert("4.0", "Enter name of the list and choose a colour to create a new list. The name of the list should be uinque. ")
 textbox.insert("5.0", "Type any non list notes here. ")
-textbox.insert("6.0", "Psst... I wuv U!")
 text = textbox.get("0.0", "end")
 
 textbox.configure(state="normal") 
