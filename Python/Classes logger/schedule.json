@@ -24,5 +24,70 @@
                 "time": "13-14"
             }
         ]
+    },
+    {
+        "day": "wednesday",
+        "classes": [
+            {
+                "section": "Grade A",
+                "time": "10-11"
+            },
+            {
+                "section": "Grade B",
+                "time": "11-12"
+            }
+        ]
+    },
+    {
+        "day": "thursday",
+        "classes": [
+            {
+                "section": "Grade A",
+                "time": "10-11"
+            },
+            {
+                "section": "Grade B",
+                "time": "11-12"
+            }
+        ]
+    },
+    {
+        "day": "friday",
+        "classes": [
+            {
+                "section": "Grade A",
+                "time": "10-11"
+            },
+            {
+                "section": "Grade B",
+                "time": "11-12"
+            }
+        ]
+    },
+    {
+        "day": "saturday",
+        "classes": [
+            {
+                "section": "Grade A",
+                "time": "10-11"
+            },
+            {
+                "section": "Grade B",
+                "time": "11-12"
+            }
+        ]
+    },
+    {
+        "day": "sunday",
+        "classes": [
+            {
+                "section": "Grade A",
+                "time": "10-11"
+            },
+            {
+                "section": "Grade B",
+                "time": "11-12"
+            }
+        ]
     }
 ]
