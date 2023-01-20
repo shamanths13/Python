@@ -1,0 +1,28 @@
+[
+    {
+        "day": "monday",
+        "classes": [
+            {
+                "section": "Grade A",
+                "time": "10-11"
+            },
+            {
+                "section": "Grade B",
+                "time": "11-12"
+            }
+        ]
+    },
+    {
+        "day": "tuesday",
+        "classes": [
+            {
+                "section": "Grade C",
+                "time": "12-13"
+            },
+            {
+                "section": "Grade D",
+                "time": "13-14"
+            }
+        ]
+    }
+]
