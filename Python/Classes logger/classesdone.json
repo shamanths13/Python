@@ -1,83 +1,15 @@
 [
     {
-        "date": "22/01/2023",
-        "day": "Sunday",
+        "date": "    Date    ",
+        "day": "    Day    ",
         "classes": [
             {
-                "section": "",
-                "cond_remarks": "",
-                "sch_time": "",
-                "act_time": "",
-                "hours": "",
-                "lesson": ""
-            }
-        ]
-    },
-    {
-        "date": "23-1-2023",
-        "day": "Monday",
-        "classes": [
-            {
-                "section": "Grade 1, Section F",
-                "cond_remarks": "y",
-                "sch_time": "9:00 am to 10:10 am ",
-                "act_time": "test",
-                "hours": "",
-                "lesson": ""
-            },
-            {
-                "section": "Grade 1, Section F",
-                "cond_remarks": "y",
-                "sch_time": "9:00 am to 10:10 am ",
-                "act_time": "3",
-                "hours": "",
-                "lesson": ""
-            },
-            {
-                "section": "Grade 1, Section F",
-                "cond_remarks": "y",
-                "sch_time": "9:00 am to 10:10 am ",
-                "act_time": "",
-                "hours": "",
-                "lesson": "english"
-            },
-            {
-                "section": "Grade 1, Section F",
-                "cond_remarks": "y",
-                "sch_time": "9:00 am to 10:10 am ",
-                "act_time": "",
-                "hours": "",
-                "lesson": ""
-            }
-        ]
-    },
-    {
-        "date": "24-1-2023",
-        "day": "Tuesday",
-        "classes": [
-            {
-                "section": "Grade 10, Section E",
-                "cond_remarks": "y",
-                "sch_time": "9:00 am to 10:10 am ",
-                "act_time": "2",
-                "hours": "",
-                "lesson": "222"
-            },
-            {
-                "section": "Grade 6, Section E",
-                "cond_remarks": "",
-                "sch_time": "10:10 am to 11:10 am ",
-                "act_time": "2333",
-                "hours": "4",
-                "lesson": "ttttttttt"
-            },
-            {
-                "section": "Grade 4, Section E",
-                "cond_remarks": "",
-                "sch_time": "1:05 pm to 2:15 pm ",
-                "act_time": "",
-                "hours": "",
-                "lesson": "11111"
+                "section": "   Grade/Section   ",
+                "cond_remarks": "   Conducted   ",
+                "sch_time": "      Scheduled Time     ",
+                "act_time": "        Actual Time      ",
+                "hours": "  Hours  ",
+                "lesson": "     Lesson Taught     "
             }
         ]
     }
