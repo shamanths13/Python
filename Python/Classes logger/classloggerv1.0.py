@@ -3,17 +3,12 @@ import json
 from datetime import date
 import os
 
-'''
 tdy_date=date.today()
 tdy_day=date.weekday(tdy_date)
 tdy_date=tdy_date.strftime("%d/%m/%Y")
-'''
-tdy_day=0
-tdy_date="23-1-2023"
 
 with open(os.path.join(os.path.dirname(__file__),"schedule.json"), 'r') as f:
     data = json.load(f)
-f.close()
 
 new_day = {
     "date":tdy_date,
@@ -23,14 +18,14 @@ new_day = {
 
 new_data = {
     "section": "",
-    "cond": "",
+    "cond_remarks": "",
     "sch_time": "",
     "act_time": "",
     "hours": "",    
-    "lesson": "",
-    "remarks": ""
+    "lesson": ""
 }
 
+check= False
 with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
     data_add = json.load(f)
     if data_add[-1]['date'] != tdy_date:
@@ -39,7 +34,20 @@ with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f
             data_add[-1]["classes"].append(new_data)
         f.seek(0)
         json.dump(data_add, f, indent = 4)
-f.close()
+        check= True
+
+if check == True:
+    for n, classes in enumerate(data[tdy_day]['classes']):
+        with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
+            data_add = json.load(f)
+            data_add[-1]["classes"][n]["section"]=classes["section"]
+            data_add[-1]["classes"][n]["sch_time"]=classes["time"]
+            f.seek(0)
+            json.dump(data_add, f, indent = 4)
+
+
+with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
+    data_add = json.load(f)
    
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("dark-blue")
@@ -60,15 +68,12 @@ def create_class(section, time,n):
     def save():
         with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
             data_add = json.load(f)
-            data_add[-1]["classes"][n]["section"]=section
-            data_add[-1]["classes"][n]["sch_time"]=time
             data_add[-1]["classes"][n]["cond_remarks"]=cond_entry.get()
             data_add[-1]["classes"][n]["act_time"]=act_time_entry.get()
             data_add[-1]["classes"][n]["hours"]=hrs_entry.get()
             data_add[-1]["classes"][n]["lesson"]=lesson_entry.get()
             f.seek(0)
             json.dump(data_add, f, indent = 4)
-        f.close()
 
 
     frame1=customtkinter.CTkFrame(frame, fg_color=colour,bg_color=colour1,corner_radius=8)
@@ -77,7 +82,7 @@ def create_class(section, time,n):
     label_1 = customtkinter.CTkLabel(frame1,text=cl_text ,font=('Arial', 14,"bold"))
     label_1.pack(pady=(2,2), padx=0)
 
-    cond_entry = customtkinter.CTkEntry(frame1,width=326,height=28,corner_radius=8,font=('Arial', 14,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Class conducted(Remarks): Y/N")
+    cond_entry = customtkinter.CTkEntry(frame1,width=326,height=28,corner_radius=8,font=('Arial', 14,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Class conducted: Y/N, Remarks")
     cond_entry.pack(padx=2, pady=(0,0))
     if data_add[-1]["classes"][n]["cond_remarks"] != "":
         cond_entry.insert(0,data_add[-1]["classes"][n]["cond_remarks"])
@@ -117,10 +122,11 @@ dt_text=data[tdy_day]['day']+"  "+tdy_date
 label_1 = customtkinter.CTkLabel(frame2,text=str.upper(dt_text) ,font=('Arial', 20,"bold"))
 label_1.pack(pady=(2,2), padx=50)
 
-for n, classi in enumerate(data[tdy_day]['classes']):
-    section=classi['section']
-    time=classi['time']
-    create_class(section,time,n)
+if tdy_day != 6 :
+    for n, classes in enumerate(data[tdy_day]['classes']):
+        section=classes['section']
+        time=classes['time']
+        create_class(section,time,n)
 
 
 def moveMouseButton(e):

@@ -104,6 +104,10 @@
     {
         "day": "Sunday",
         "classes": [
+            {
+                "section": "",
+                "time": ""
+            }
         
         ]
     }
