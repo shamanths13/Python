@@ -1,0 +1,16 @@
+[
+    {
+        "date": "    Date    ",
+        "day": "    Day    ",
+        "classes": [
+            {
+                "section": "   Grade/Section   ",
+                "cond_remarks": "   Conducted   ",
+                "sch_time": "      Scheduled Time     ",
+                "act_time": "        Actual Time      ",
+                "hours": "  Hours  ",
+                "lesson": "     Lesson Taught     "
+            }
+        ]
+    }
+]
