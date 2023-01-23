@@ -3,13 +3,9 @@ import json
 from datetime import date
 import os
 
-'''
 tdy_date=date.today()
 tdy_day=date.weekday(tdy_date)
 tdy_date=tdy_date.strftime("%d/%m/%Y")
-'''
-tdy_day=5
-tdy_date="21/01/2023"
 
 with open(os.path.join(os.path.dirname(__file__),"schedule.json"), 'r') as f:
     data = json.load(f)
