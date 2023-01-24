@@ -527,12 +527,12 @@
         "classes": [
             {
                 "section": "Grade 3, Section E",
-                "cond": "",
+                "cond": "sdfdf",
                 "sch_time": "10:10 am to 11:10 am ",
-                "act_time": "",
-                "hours": "",
-                "lesson": "",
-                "remarks": ""
+                "act_time": "sdfdf",
+                "hours": "bbbfd",
+                "lesson": "bbbbbdf",
+                "remarks": "dfdfddfdfdfdf"
             },
             {
                 "section": "Grade 6, Section F",
@@ -540,15 +540,15 @@
                 "sch_time": "12:05 am to 1:05 am ",
                 "act_time": "",
                 "hours": "",
-                "lesson": "",
-                "remarks": ""
+                "lesson": "bb",
+                "remarks": "dfdffd"
             },
             {
                 "section": "Grade 8, Section E",
                 "cond": "",
                 "sch_time": "1:05 pm to 2:15 pm ",
                 "act_time": "",
-                "hours": "",
+                "hours": "bb",
                 "lesson": "",
                 "remarks": ""
             },
@@ -558,15 +558,15 @@
                 "sch_time": "6:00 pm to 7:00 pm",
                 "act_time": "",
                 "hours": "",
-                "lesson": "",
+                "lesson": "bb",
                 "remarks": ""
             },
             {
                 "section": "vaayu",
                 "cond": "y",
                 "sch_time": "1-2",
-                "act_time": "1-2",
-                "hours": "1",
+                "act_time": "bbbb",
+                "hours": "1bbdf",
                 "lesson": "something",
                 "remarks": "spmething else"
             }
