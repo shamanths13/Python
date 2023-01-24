@@ -520,5 +520,56 @@
                 "remarks": ""
             }
         ]
+    },
+    {
+        "date": "25/01/2023",
+        "day": "Wednesday",
+        "classes": [
+            {
+                "section": "Grade 3, Section E",
+                "cond": "",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 6, Section F",
+                "cond": "",
+                "sch_time": "12:05 am to 1:05 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8, Section E",
+                "cond": "",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Sunbeam",
+                "cond": "",
+                "sch_time": "6:00 pm to 7:00 pm",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "vaayu",
+                "cond": "y",
+                "sch_time": "1-2",
+                "act_time": "1-2",
+                "hours": "1",
+                "lesson": "something",
+                "remarks": "spmething else"
+            }
+        ]
     }
 ]

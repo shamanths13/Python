@@ -120,7 +120,7 @@ def create_class(section, time,n):
         remarks_entry = customtkinter.CTkEntry(tab1,width=280,height=32,corner_radius=8,font=('Arial', 14,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Enter any remarks")
         remarks_entry.pack(padx=2, pady=(2,0))
         if data_add[-1]["classes"][n]["remarks"] != "":
-            lesson_entry.insert(0,data_add[-1]["classes"][n]["remarks"])
+            remarks_entry.insert(0,data_add[-1]["classes"][n]["remarks"])
         
         buttonsave = customtkinter.CTkButton(tab1, hover=True, hover_color="lime green", width=60, height=10, fg_color="forest green",bg_color=colour, text="Save", text_color= "gray75", font=('Arial', 14,"bold"), corner_radius=8, command=save)
         buttonsave.pack(pady=(6,0), padx=0)
