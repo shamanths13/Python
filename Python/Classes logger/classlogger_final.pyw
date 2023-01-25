@@ -30,13 +30,14 @@ check= False
 with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
     data_add = json.load(f)
     if data_add[-1]['date'] != tdy_date:
-        with open(os.path.join(os.path.dirname(__file__),"classesdonebackup.json"), 'w') as backup:
+        with open(os.path.join(os.path.dirname(__file__),"classesdone_backup.json"), 'w') as backup:
             json.dump(data_add, backup, indent = 4)
         data_add.append(new_day)
         for n, classes in enumerate(data[tdy_day]['classes']):
             data_add[-1]["classes"].append(new_data)
         f.seek(0)
         json.dump(data_add, f, indent = 4)
+        f.truncate()
         check= True
 
 if check == True:
@@ -47,14 +48,17 @@ if check == True:
             data_add[-1]["classes"][n]["sch_time"]=classes["time"]
             f.seek(0)
             json.dump(data_add, f, indent = 4)
+            f.truncate()
 
-value=0
 with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r') as f:
     data_add = json.load(f)
     value=len(data_add[-1]["classes"])
+
 if value > 4:
     value = value-4
-   
+else:
+    value=0
+
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("dark-blue")
 
@@ -85,13 +89,14 @@ def create_class(section, time,n):
                 data_add[-1]["classes"][n]["remarks"]=remarks_entry.get()
                 f.seek(0)
                 json.dump(data_add, f, indent = 4)
+                f.truncate()
             tabview.delete(name)
-        tab1=tabview.add(name)
-        
 
         def tabn_exit():
             tabview.delete(name)
 
+
+        tab1=tabview.add(name)
 
         cl_text="Time: "+time
         label_1 = customtkinter.CTkLabel(tab1,text=section ,font=('Arial', 16,"bold"))
@@ -100,7 +105,7 @@ def create_class(section, time,n):
         label_1.pack(pady=(0,6), padx=0)
 
         with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
-                data_add = json.load(f)
+            data_add = json.load(f)
 
         cond_entry = customtkinter.CTkEntry(tab1,width=280,height=32,corner_radius=8,font=('Arial', 14,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Class conducted: Y/N")
         cond_entry.pack(padx=2, pady=(0,0))
@@ -112,7 +117,7 @@ def create_class(section, time,n):
         if data_add[-1]["classes"][n]["act_time"] != "":
             act_time_entry.insert(0,data_add[-1]["classes"][n]["act_time"])
 
-        hrs_entry = customtkinter.CTkEntry(tab1,width=280,height=32,corner_radius=8,font=('Arial', 14,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Enter no. of hours")
+        hrs_entry = customtkinter.CTkEntry(tab1,width=280,height=32,corner_radius=8,font=('Arial', 14,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Enter no. of hours(HH:MM)")
         hrs_entry.pack(padx=2, pady=(2,0))
         if data_add[-1]["classes"][n]["hours"] != "":
             hrs_entry.insert(0,data_add[-1]["classes"][n]["hours"])
@@ -185,6 +190,7 @@ def add_misc():
             data_add[-1]["classes"].append(new_data)
             f.seek(0)
             json.dump(data_add, f, indent = 4)
+            f.truncate()
         with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
                 data_add = json.load(f)
                 data_add[-1]["classes"][-1]["section"]=new_section_entry.get()
@@ -196,6 +202,7 @@ def add_misc():
                 data_add[-1]["classes"][-1]["remarks"]=new_remarks_entry.get()
                 f.seek(0)
                 json.dump(data_add, f, indent = 4)
+                f.truncate()
         tabview.delete("New")
 
 
