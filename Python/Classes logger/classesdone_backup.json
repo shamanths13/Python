@@ -23,7 +23,7 @@
                 "cond": "Y",
                 "sch_time": "6:00 pm to 7:00 pm",
                 "act_time": "6:00 pm to 7:00 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "Figma",
                 "remarks": ""
             }
@@ -38,7 +38,7 @@
                 "cond": "Y",
                 "sch_time": "6:00 pm to 7:00 pm",
                 "act_time": "6:00 pm to 7:00 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "Figma",
                 "remarks": ""
             }
@@ -62,7 +62,7 @@
                 "cond": "Y",
                 "sch_time": "10:10 am to 11:10 am ",
                 "act_time": "11:15 am to 12:15 am",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "Story telling in python",
                 "remarks": ""
             },
@@ -95,7 +95,7 @@
                 "cond": "Y",
                 "sch_time": "9:00 am to 10:10 am ",
                 "act_time": "10:00 am to 10:45 am",
-                "hours": "45",
+                "hours": "0:45",
                 "lesson": "",
                 "remarks": "Students didnt join"
             },
@@ -155,7 +155,7 @@
                 "cond": "Y",
                 "sch_time": "6:00 pm to 7:00 pm",
                 "act_time": "6:00 pm to 7:00 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "Figma/Buttons",
                 "remarks": ""
             }
@@ -236,7 +236,7 @@
                 "cond": "Y",
                 "sch_time": "6:00 pm to 7:00 pm",
                 "act_time": "6:00 pm to 7:00 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "Figma/Colour coordination",
                 "remarks": ""
             }
@@ -284,7 +284,7 @@
                 "cond": "Y",
                 "sch_time": "12:05 pm to 1:05 pm ",
                 "act_time": "1:00 pm to 1:50 pm",
-                "hours": "50",
+                "hours": "0:50",
                 "lesson": "sqrt,factors and multiples",
                 "remarks": ""
             },
@@ -293,7 +293,7 @@
                 "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
                 "act_time": "1:50 pm to 2:50 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "sqrt,factors and multiples",
                 "remarks": ""
             }
@@ -317,7 +317,7 @@
                 "cond": "Y",
                 "sch_time": "10:10 am to 11:10 am ",
                 "act_time": "11:15 am to 12:15 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "waste sorting",
                 "remarks": ""
             },
@@ -326,7 +326,7 @@
                 "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
                 "act_time": "1:50 pm to 2:50 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "simple interest",
                 "remarks": ""
             }
@@ -350,7 +350,7 @@
                 "cond": "Y",
                 "sch_time": "12:05 am to 1:05 am ",
                 "act_time": "1:00 pm to 1:50 pm",
-                "hours": "50",
+                "hours": "0:50",
                 "lesson": "Waste sorting",
                 "remarks": ""
             },
@@ -359,7 +359,7 @@
                 "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
                 "act_time": "1:50 pm to 2:50 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "temperature conversion",
                 "remarks": ""
             },
@@ -392,7 +392,7 @@
                 "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
                 "act_time": "1:50 pm to 2:50 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "external css",
                 "remarks": ""
             }
@@ -416,7 +416,7 @@
                 "cond": "Y",
                 "sch_time": "10:10 am to 11:10 am ",
                 "act_time": "11:35 am to 12:20 pm",
-                "hours": "45",
+                "hours": "0:45",
                 "lesson": "drive across the city, run a race",
                 "remarks": ""
             },
@@ -425,7 +425,7 @@
                 "cond": "Y",
                 "sch_time": "12:05 am to 1:05 am ",
                 "act_time": "1:00 pm to 1:50 pm",
-                "hours": "50",
+                "hours": "0:50",
                 "lesson": "simple interest ",
                 "remarks": ""
             }
@@ -440,7 +440,7 @@
                 "cond": "Y",
                 "sch_time": "10:10 am to 11:10 am ",
                 "act_time": "11:15 am to 11:45 am",
-                "hours": "30",
+                "hours": "0:30",
                 "lesson": "",
                 "remarks": "School wasnt responding"
             },
@@ -458,7 +458,7 @@
                 "cond": "Y",
                 "sch_time": "1:40 pm to 2:10 pm",
                 "act_time": "1:40 pm to 2:10 pm",
-                "hours": "30",
+                "hours": "0:30",
                 "lesson": "lists and tuples",
                 "remarks": "replacement class for prince"
             }
@@ -506,7 +506,7 @@
                 "cond": "",
                 "sch_time": "12:05 pm to 1:05 pm ",
                 "act_time": "12:35 pm to 12:46 pm",
-                "hours": "11 mins",
+                "hours": "0:11",
                 "lesson": "",
                 "remarks": "School had tech issue"
             },
@@ -515,7 +515,7 @@
                 "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
                 "act_time": "1:30 pm to 2:30 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "Bar graphs, line graphs, dual graphs, pie chart",
                 "remarks": ""
             }
@@ -539,7 +539,7 @@
                 "cond": "Y",
                 "sch_time": "10:10 am to 11:10 am ",
                 "act_time": "10:45 am to 11:45 am",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "Intro to AI, build app to recognize handwritten text and printed text",
                 "remarks": ""
             },
@@ -548,7 +548,7 @@
                 "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
                 "act_time": "1:35 pm to 2:35 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "Understanding of music by using mBlock",
                 "remarks": ""
             }
@@ -581,7 +581,7 @@
                 "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
                 "act_time": "1:50 pm to 2:50 pm",
-                "hours": "1",
+                "hours": "1:00",
                 "lesson": "currency exchange ",
                 "remarks": ""
             },
@@ -599,7 +599,7 @@
                 "cond": "Y",
                 "sch_time": "9:40 am to 11:00 am",
                 "act_time": "9:40 am to 11:00 am",
-                "hours": "1:20",
+                "hours": "1:25",
                 "lesson": "Intro to python, data types and flow control statements",
                 "remarks": "Singhal school replacement class"
             }
