@@ -485,11 +485,11 @@
         "classes": [
             {
                 "section": "Grade 1, Section F",
-                "cond": "",
+                "cond": "Y",
                 "sch_time": "9:00 am to 10:10 am ",
-                "act_time": "",
-                "hours": "",
-                "lesson": "",
+                "act_time": "9:40 am to 10:45 am",
+                "hours": "1:05",
+                "lesson": "Class Cancelled",
                 "remarks": ""
             },
             {
@@ -505,18 +505,51 @@
                 "section": "Grade 5, Section F",
                 "cond": "",
                 "sch_time": "12:05 pm to 1:05 pm ",
+                "act_time": "12:35 pm to 12:46 pm",
+                "hours": "11 mins",
+                "lesson": "",
+                "remarks": "School had tech issue"
+            },
+            {
+                "section": "Grade 5, Section E",
+                "cond": "Y",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "1:30 pm to 2:30 pm",
+                "hours": "1",
+                "lesson": "Bar graphs, line graphs, dual graphs, pie chart",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "24/01/2023",
+        "day": "Tuesday",
+        "classes": [
+            {
+                "section": "Grade 10, Section E",
+                "cond": "",
+                "sch_time": "9:00 am to 10:10 am ",
                 "act_time": "",
                 "hours": "",
                 "lesson": "",
                 "remarks": ""
             },
             {
-                "section": "Grade 5, Section E",
-                "cond": "",
+                "section": "Grade 6, Section E",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:45 am to 11:45 am",
+                "hours": "1",
+                "lesson": "Intro to AI, build app to recognize handwritten text and printed text",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 4, Section E",
+                "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
-                "act_time": "",
-                "hours": "",
-                "lesson": "",
+                "act_time": "1:35 pm to 2:35 pm",
+                "hours": "1",
+                "lesson": "Understanding of music by using mBlock",
                 "remarks": ""
             }
         ]
@@ -527,29 +560,29 @@
         "classes": [
             {
                 "section": "Grade 3, Section E",
-                "cond": "sdfdf",
+                "cond": "Y",
                 "sch_time": "10:10 am to 11:10 am ",
-                "act_time": "sdfdf",
-                "hours": "bbbfd",
-                "lesson": "bbbbbdf",
-                "remarks": "dfdfddfdfdfdf"
+                "act_time": "11:15 am to 12:35 pm",
+                "hours": "1:20",
+                "lesson": "Simple machines in mblock",
+                "remarks": ""
             },
             {
                 "section": "Grade 6, Section F",
-                "cond": "",
+                "cond": "Y",
                 "sch_time": "12:05 am to 1:05 am ",
-                "act_time": "",
-                "hours": "",
-                "lesson": "bb",
-                "remarks": "dfdffd"
+                "act_time": "1:00 pm to 1:50 pm",
+                "hours": "0:50",
+                "lesson": "Intro to AI and build app to find handwritten text",
+                "remarks": ""
             },
             {
                 "section": "Grade 8, Section E",
-                "cond": "",
+                "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
-                "act_time": "",
-                "hours": "bb",
-                "lesson": "",
+                "act_time": "1:50 pm to 2:50 pm",
+                "hours": "1",
+                "lesson": "currency exchange ",
                 "remarks": ""
             },
             {
@@ -558,17 +591,17 @@
                 "sch_time": "6:00 pm to 7:00 pm",
                 "act_time": "",
                 "hours": "",
-                "lesson": "bb",
+                "lesson": "",
                 "remarks": ""
             },
             {
-                "section": "vaayu",
-                "cond": "y",
-                "sch_time": "1-2",
-                "act_time": "bbbb",
-                "hours": "1bbdf",
-                "lesson": "something",
-                "remarks": "spmething else"
+                "section": "9 Grade, Section Vayu",
+                "cond": "Y",
+                "sch_time": "9:40 am to 11:00 am",
+                "act_time": "9:40 am to 11:00 am",
+                "hours": "1:20",
+                "lesson": "Intro to python, data types and flow control statements",
+                "remarks": "Singhal school replacement class"
             }
         ]
     }

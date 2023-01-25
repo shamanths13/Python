@@ -30,6 +30,8 @@ check= False
 with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
     data_add = json.load(f)
     if data_add[-1]['date'] != tdy_date:
+        with open(os.path.join(os.path.dirname(__file__),"classesdonebackup.json"), 'w') as backup:
+            json.dump(data_add, backup, indent = 4)
         data_add.append(new_day)
         for n, classes in enumerate(data[tdy_day]['classes']):
             data_add[-1]["classes"].append(new_data)
