@@ -604,5 +604,71 @@
                 "remarks": "Singhal school replacement class"
             }
         ]
+    },
+    {
+        "date": "26/01/2023",
+        "day": "Thursday",
+        "classes": [
+            {
+                "section": "Grade 9, Section E",
+                "cond": "",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 7, Section E",
+                "cond": "",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "test",
+                "cond": "",
+                "sch_time": "",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "27/01/2023",
+        "day": "Friday",
+        "classes": [
+            {
+                "section": "Grade 9, Section F",
+                "cond": "test",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 2, Section E",
+                "cond": "",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 4, Section F",
+                "cond": "testing",
+                "sch_time": "12:05 am to 1:05 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
     }
 ]
