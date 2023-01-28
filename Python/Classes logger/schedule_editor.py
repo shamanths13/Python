@@ -48,67 +48,89 @@ buttonmove.place(relx=0.0166, rely=0.15)
 buttonexit = customtkinter.CTkButton(frame1, hover=True, hover_color="red", width=33, height=23, fg_color=colour1,bg_color=colour, text="X", text_color= colour,font=('Arial', 12,"bold"), corner_radius=8, command=root.quit)
 buttonexit.place(relx=0.888, rely=0.15)
 
-frame2=customtkinter.CTkFrame(frame,width=100, fg_color=colour,bg_color=colour1,corner_radius=8)
-frame2.pack(pady=(5,0),padx=5,expand=True,side="left")
+tabview = customtkinter.CTkTabview(frame,height=(340), corner_radius=8,fg_color= colour, segmented_button_selected_color="mediumpurple4")
+tabview.pack(padx=5, pady=(0,5), fill="both",expand=True)
+
+tabmain=tabview.add("Schedule")
+tabview.configure(state="disabled")
 
 def create_day(day,n):
 
     def edit_day():
-        for child in frame2.winfo_children():
-            child.configure(state='disabled')
-        buttonday.configure(fg_color="blue")
-        def save_back():
-            buttonday.configure(fg_color=colour1)
-            frame2a.destroy()
-            for child in frame2.winfo_children():
-                child.configure(state='normal')
-            
-        def edit_class(classes,m):
-            def save_class():
-                day[m]
+        tabn=tabview.add(day["day"])
 
-                pass
-
-
-            def delete_class():
-                del day_dict[m]
-                print(day_dict)
-                frame4.destroy()
-                pass
-            
-
-            frame4=customtkinter.CTkFrame(frame2a, fg_color=colour1,bg_color=colour,corner_radius=8)
-            frame4.pack(pady=(5,0),padx=5,fill="both",expand=True)
-
-            new_section_entry = customtkinter.CTkEntry(frame4,width=280,height=28,corner_radius=8,font=('Arial', 14,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Enter the Grade/Section")
-            new_section_entry.pack(padx=2, pady=(0,0))
-            new_section_entry.insert(0,classes["section"])
-    
-            new_sch_time_entry = customtkinter.CTkEntry(frame4,width=280,height=28,corner_radius=8,font=('Arial', 14,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Enter the scheduled time")
-            new_sch_time_entry.pack(padx=2, pady=(0,0))
-            new_sch_time_entry.insert(0,classes["time"])
-
-            buttonsave = customtkinter.CTkButton(frame4, hover=True, hover_color="lime green", width=60, height=10, fg_color="forest green",bg_color=colour, text="Save", text_color= "white", font=('Arial', 14,"bold"), corner_radius=8, command=save_class)
-            buttonsave.pack(pady=(7,9), padx=0)
-
-            buttonexit = customtkinter.CTkButton(frame4, hover=True, hover_color="red", width=60, height=10, fg_color=colour1,bg_color=colour, text="Cancel", text_color= "gray75",font=('Arial', 14,"bold"), corner_radius=8, command=delete_class)
-            buttonexit.pack(padx=2, pady=(0,0))
+        def class_add():
             pass
 
-        frame2a=customtkinter.CTkFrame(frame,width=200, fg_color=colour1,bg_color=colour,corner_radius=8)
-        frame2a.pack(pady=(5,0),padx=5,side="top")
+        def create_class(classes,m):
+            def edit_class():
 
-        buttonexit = customtkinter.CTkButton(frame2a, hover=True, hover_color="red", width=60, height=10, fg_color=colour1,bg_color=colour, text="Cancel", text_color= "gray75",font=('Arial', 14,"bold"), corner_radius=8, command=save_back)
+                def class_save():
+                    data[n]["classes"][m]["section"]=section_entry.get()
+                    data[n]["classes"][m]["sch_time"]=time_entry.get()
+                    tabview.delete("Edit Class")
+                    tabview.delete(day["day"])
+                    edit_day()
+
+                    pass
+
+                def class_del():
+                    del data[n]["classes"][m]
+                    tabview.delete("Edit Class")
+                    tabview.delete(day["day"])
+                    edit_day()
+                    pass
+
+
+                tabc=tabview.add("Edit Class")
+                frameca=customtkinter.CTkFrame(tabc, fg_color=colour1,bg_color=colour,corner_radius=8)
+                frameca.pack(pady=(0,0),padx=5,fill="both",expand=True)
+
+                section_entry = customtkinter.CTkEntry(frameca,width=280,height=32,corner_radius=8,font=('Arial', 14,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Enter any remarks")
+                section_entry.pack(padx=2, pady=(15,0))
+                section_entry.insert(0,classes["section"])
+
+                time_entry = customtkinter.CTkEntry(frameca,width=280,height=32,corner_radius=8,font=('Arial', 14,"bold"),fg_color=colour1,placeholder_text_color="gray30", placeholder_text="Enter any remarks")
+                time_entry.pack(padx=2, pady=(15,0))
+                time_entry.insert(0,classes["time"])
+
+                class_savebtn = customtkinter.CTkButton(frameca, hover=True, hover_color="lime green",  width=60,height=30, fg_color=colour1,bg_color=colour, text="Save", text_color= "white", font=('Arial', 14,"bold"), corner_radius=8, command=class_save)
+                class_savebtn.pack(pady=(7,9), padx=10,fill="both",expand=True)
+
+                class_delbtn = customtkinter.CTkButton(frameca, hover=True, hover_color="lime green",  width=60,height=30, fg_color=colour1,bg_color=colour, text="Delete", text_color= "white", font=('Arial', 14,"bold"), corner_radius=8, command=class_del)
+                class_delbtn.pack(pady=(7,9), padx=10,fill="both",expand=True)
+
+                tabview.set("Edit Class")
+                
+            framec=customtkinter.CTkFrame(tabn, fg_color=colour1,bg_color=colour,corner_radius=8)
+            framec.pack(pady=(5,0),padx=5,fill="both",expand=True)
+
+            class_name=classes["section"]+"\nTime: "+classes["time"]
+
+            buttonclass = customtkinter.CTkButton(framec, hover=True, hover_color="lime green",  width=60,height=30, fg_color=colour1,bg_color=colour, text=class_name, text_color= "white", font=('Arial', 14,"bold"), corner_radius=8, command=edit_class)
+            buttonclass.pack(pady=(7,9), padx=10,fill="both",expand=True)
+
+            pass
+
+        def save_back():
+            tabview.delete(day["day"])
+            pass
+
+        buttonadd = customtkinter.CTkButton(tabn, hover=True, hover_color="red", width=60, height=10, fg_color=colour1,bg_color=colour, text="Add New Class", text_color= "gray75",font=('Arial', 14,"bold"), corner_radius=8, command=class_add)
+        buttonadd.pack(padx=2, pady=(0,0))
+
+        for m,classes in enumerate(data[n]["classes"]):
+            create_class(classes,m)
+
+        buttonexit = customtkinter.CTkButton(tabn, hover=True, hover_color="red", width=60, height=10, fg_color=colour1,bg_color=colour, text="Cancel", text_color= "gray75",font=('Arial', 14,"bold"), corner_radius=8, command=save_back)
         buttonexit.pack(padx=2, pady=(0,0))
 
-        for m,classes in enumerate(day_dict):
-            edit_class(classes,m)
-        pass
+        tabview.set(day["day"])
     
     day_dict=day["classes"]
     print(day_dict)
 
-    buttonday = customtkinter.CTkButton(frame2, hover=True, hover_color="lime green",  width=60,height=30, fg_color=colour1,bg_color=colour, text=day["day"], text_color= "white", font=('Arial', 14,"bold"), corner_radius=8, command=edit_day)
+    buttonday = customtkinter.CTkButton(tabmain, hover=True, hover_color="lime green",  width=60,height=30, fg_color=colour1,bg_color=colour, text=day["day"], text_color= "white", font=('Arial', 14,"bold"), corner_radius=8, command=edit_day)
     buttonday.pack(pady=(7,9), padx=10,fill="both",expand=True)
     pass
 

@@ -670,5 +670,29 @@
                 "remarks": ""
             }
         ]
+    },
+    {
+        "date": "28/01/2023",
+        "day": "Saturday",
+        "classes": [
+            {
+                "section": "Grade 12",
+                "cond": "",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "",
+                "cond": "",
+                "sch_time": "",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
     }
 ]
