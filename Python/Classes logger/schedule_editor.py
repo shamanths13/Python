@@ -72,14 +72,13 @@ def create_day(day,n):
                     tabview.delete(day["day"])
                     edit_day()
 
-                    pass
 
                 def class_del():
                     del data[n]["classes"][m]
                     tabview.delete("Edit Class")
                     tabview.delete(day["day"])
                     edit_day()
-                    pass
+
 
 
                 tabc=tabview.add("Edit Class")
