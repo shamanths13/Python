@@ -84,7 +84,6 @@ frame_list.pack(pady=(0,6),padx=5,fill="both",expand=True)
 label_1 = customtkinter.CTkLabel(frame_list,text="     Date                No. of Classes" ,font=('Arial', 16,"bold"))
 label_1.pack(pady=(5,6), padx=0)
 
-#data_textbox = tkinter.Text(frame_list, font=('Arial', 14,"bold"),fg="white", border=0, bg=colour, highlightthickness=0)
 data_textbox = customtkinter.CTkTextbox(frame_list, width= 280,height=165,fg_color=colour1,bg_color=colour, corner_radius=8, font=('Arial', 14,"bold"), wrap="word",activate_scrollbars=False)
 data_textbox.pack(pady=(0,10), padx=0)
 
