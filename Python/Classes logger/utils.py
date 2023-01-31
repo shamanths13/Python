@@ -31,7 +31,6 @@ for n in range(len(data)):
 total_time=str(int(hrs_total+((min_total-(min_total%60))/60)))+" hrs "+str(int(min_total%60))+" mins"
 total_time_rnd=str(int(hrs_total+((min_total_rnd-(min_total_rnd%60))/60)))+" hrs "+str(int(min_total_rnd%60))+" mins"
 
-
 customtkinter.set_appearance_mode("dark")
 customtkinter.set_default_color_theme("dark-blue")
 
