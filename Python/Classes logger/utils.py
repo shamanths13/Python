@@ -1,4 +1,4 @@
-import customtkinter, tkinter
+import customtkinter
 import json
 import os
 
