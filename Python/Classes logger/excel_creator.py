@@ -4,7 +4,7 @@ from openpyxl.styles import Font, Alignment
 import os
 import json
 
-with open(os.path.join(os.path.dirname(__file__),"Resources\classesdone.json"), 'r') as f:
+with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r') as f:
     data = json.load(f)
 
 wb=Workbook()
