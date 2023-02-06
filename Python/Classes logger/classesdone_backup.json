@@ -245,17 +245,7 @@
     {
         "date": "15/01/2023",
         "day": "Sunday",
-        "classes": [
-            {
-                "section": "",
-                "cond": "",
-                "sch_time": "",
-                "act_time": "",
-                "hours": "",
-                "lesson": "",
-                "remarks": ""
-            }
-        ]
+        "classes": []
     },
     {
         "date": "16/01/2023",
@@ -467,17 +457,7 @@
     {
         "date": "22/01/2023",
         "day": "Sunday",
-        "classes": [
-            {
-                "section": "",
-                "cond": "",
-                "sch_time": "",
-                "act_time": "",
-                "hours": "",
-                "lesson": "",
-                "remarks": ""
-            }
-        ]
+        "classes": []
     },
     {
         "date": "23/01/2023",

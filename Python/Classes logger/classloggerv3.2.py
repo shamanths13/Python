@@ -74,19 +74,11 @@ colour="gray35"
 colour1="gray20"
 
 def schedule_create():
-    if tdy_day != 6 :
-        for n, classes in enumerate(data_add[-1]['classes']):
-            section=classes['section']
-            time=classes['sch_time']
-            create_class(section,time,n)
-            tabview.set("Schedule")
-    else:
-        for n, classes in enumerate(data_add[-1]['classes']):
-            if n!=0:
-                section=classes['section']
-                time=classes['sch_time']
-                create_class(section,time,n)
-                tabview.set("Schedule")
+    for n, classes in enumerate(data_add[-1]['classes']):
+        section=classes['section']
+        time=classes['sch_time']
+        create_class(section,time,n)
+        tabview.set("Schedule")
 
 def create_class(section, time,n):
 
@@ -169,7 +161,12 @@ frame2.pack(pady=(5,0),padx=5,fill="both",expand=True)
 buttonmove = customtkinter.CTkButton(frame2, hover=True, hover_color="lime green", width=33, height=23, fg_color=colour1,bg_color=colour, text="◎", text_color= colour, font=('Arial', 14,"bold"), corner_radius=8)
 buttonmove.place(relx=0.0166, rely=0.15)
 
-buttonexit = customtkinter.CTkButton(frame2, hover=True, hover_color="red", width=33, height=23, fg_color=colour1,bg_color=colour, text="X", text_color= colour,font=('Arial', 12,"bold"), corner_radius=8, command=root.quit)
+def app_quit():
+    root.quit()
+    import excel_creator
+    
+
+buttonexit = customtkinter.CTkButton(frame2, hover=True, hover_color="red", width=33, height=23, fg_color=colour1,bg_color=colour, text="X", text_color= colour,font=('Arial', 12,"bold"), corner_radius=8, command=app_quit)
 buttonexit.place(relx=0.888, rely=0.15)
 
 dt_text=data[tdy_day]['day']+"  "+tdy_date
