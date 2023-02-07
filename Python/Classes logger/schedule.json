@@ -2,24 +2,36 @@
     {
         "day": "Monday",
         "classes": [
-            
+            {
+                "section": "Grade 1, Section F",
+                "time": "9:00 am to 10:10 am "
+            },
+            {
+                "section": "Grade 11",
+                "time": "10:10 am to 11:10 am "
+            },
+            {
+                "section": "Grade 5, Section F",
+                "time": "12:05 pm to 1:05 pm "
+            },
+            {
+                "section": "Grade 5, Section E",
+                "time": "1:05 pm to 2:15 pm "
+            }
         ]
     },
     {
         "day": "Tuesday",
         "classes": [
-            {   
-                "id": "1",
+            {
                 "section": "Grade 10, Section E",
                 "time": "9:00 am to 10:10 am "
             },
-            {   
-                "id": "2",
+            {
                 "section": "Grade 6, Section E",
                 "time": "10:10 am to 11:10 am "
             },
-            {   
-                "id": "3",
+            {
                 "section": "Grade 4, Section E",
                 "time": "1:05 pm to 2:15 pm "
             }
@@ -28,18 +40,15 @@
     {
         "day": "Wednesday",
         "classes": [
-            {   
-                "id": "1",
+            {
                 "section": "Grade 3, Section E",
                 "time": "10:10 am to 11:10 am "
             },
-            {   
-                "id": "2",
+            {
                 "section": "Grade 6, Section F",
                 "time": "12:05 am to 1:05 am "
             },
-            {   
-                "id": "3",
+            {
                 "section": "Grade 8, Section E",
                 "time": "1:05 pm to 2:15 pm "
             }
@@ -48,13 +57,11 @@
     {
         "day": "Thursday",
         "classes": [
-            {   
-                "id": "1",
+            {
                 "section": "Grade 9, Section E",
                 "time": "9:00 am to 10:10 am "
             },
-            {   
-                "id": "2",
+            {
                 "section": "Grade 7, Section E",
                 "time": "1:05 pm to 2:15 pm "
             }
@@ -63,18 +70,15 @@
     {
         "day": "Friday",
         "classes": [
-            {   
-                "id": "1",
+            {
                 "section": "Grade 9, Section F",
                 "time": "9:00 am to 10:10 am "
             },
-            {   
-                "id": "2",
+            {
                 "section": "Grade 2, Section E",
                 "time": "10:10 am to 11:10 am "
             },
-            {   
-                "id": "3",
+            {
                 "section": "Grade 4, Section F",
                 "time": "12:05 am to 1:05 am "
             }
@@ -83,8 +87,7 @@
     {
         "day": "Saturday",
         "classes": [
-            {   
-                "id": "1",
+            {
                 "section": "Grade 12",
                 "time": "10:10 am to 11:10 am "
             }
@@ -93,11 +96,6 @@
     {
         "day": "Sunday",
         "classes": [
-            {   
-                "id": "1",
-                "section": "",
-                "time": ""
-            }
         
         ]
     }

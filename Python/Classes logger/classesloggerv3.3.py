@@ -1,20 +1,31 @@
 import customtkinter
 import json
-from datetime import date
+from datetime import date, timedelta
 import os
 
 tdy_date=date.today()
+tdy_date_n=tdy_date
 tdy_day=date.weekday(tdy_date)
 tdy_date=tdy_date.strftime("%d/%m/%Y")
+
+with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
+    data_add = json.load(f)
 
 with open(os.path.join(os.path.dirname(__file__),"schedule.json"), 'r') as f:
     data = json.load(f)
 
-new_day = {
-    "date":tdy_date,
-    "day":data[tdy_day]['day'],
-    "classes":[]
-}
+sheet_date=data_add[-1]['date']
+new_date=tdy_date_n.strftime("%d/%m/%Y")
+that_day=0
+i=0
+
+if new_date != sheet_date:
+    with open(os.path.join(os.path.dirname(__file__),"classesdone_backup.json"), 'w') as backup:
+            json.dump(data_add, backup, indent = 4)
+
+while new_date != sheet_date:
+    new_date=(tdy_date_n-timedelta(days=i+1)).strftime("%d/%m/%Y")    
+    i=i+1
 
 new_data = {
     "section": "",
@@ -26,29 +37,33 @@ new_data = {
     "remarks": ""
 }
 
-check= False
-with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
-    data_add = json.load(f)
-    if data_add[-1]['date'] != tdy_date:
-        with open(os.path.join(os.path.dirname(__file__),"classesdone_backup.json"), 'w') as backup:
-            json.dump(data_add, backup, indent = 4)
+for _ in range(i):
+    new_date=(tdy_date_n-timedelta(days=i-1)).strftime("%d/%m/%Y")
+    that_day=date.weekday(tdy_date_n-timedelta(days=i-1))
+
+    new_day = {
+    "date":new_date,
+    "day":data[that_day]['day'],
+    "classes":[]
+}
+    with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
+        data_add = json.load(f)
         data_add.append(new_day)
-        for n, classes in enumerate(data[tdy_day]['classes']):
+        for n, classes in enumerate(data[that_day]['classes']):
             data_add[-1]["classes"].append(new_data)
         f.seek(0)
         json.dump(data_add, f, indent = 4)
         f.truncate()
-        check= True
+        for n, classes in enumerate(data[that_day]['classes']):
+            with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
+                data_add = json.load(f)
+                data_add[-1]["classes"][n]["section"]=classes["section"]
+                data_add[-1]["classes"][n]["sch_time"]=classes["time"]
+                f.seek(0)
+                json.dump(data_add, f, indent = 4)
+                f.truncate()
+    i=i-1
 
-if check == True:
-    for n, classes in enumerate(data[tdy_day]['classes']):
-        with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r+') as f:
-            data_add = json.load(f)
-            data_add[-1]["classes"][n]["section"]=classes["section"]
-            data_add[-1]["classes"][n]["sch_time"]=classes["time"]
-            f.seek(0)
-            json.dump(data_add, f, indent = 4)
-            f.truncate()
 
 with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r') as f:
     data_add = json.load(f)
@@ -73,6 +88,12 @@ root.wm_attributes('-transparentcolor',"black")
 colour="gray35"
 colour1="gray20"
 
+def schedule_create():
+    for n, classes in enumerate(data_add[-1]['classes']):
+        section=classes['section']
+        time=classes['sch_time']
+        create_class(section,time,n)
+        tabview.set("Schedule")
 
 def create_class(section, time,n):
 
@@ -94,7 +115,6 @@ def create_class(section, time,n):
 
         def tabn_exit():
             tabview.delete(name)
-
 
         tab1=tabview.add(name)
 
@@ -141,7 +161,7 @@ def create_class(section, time,n):
         tabview.set(name)
 
 
-    buttonclass = customtkinter.CTkButton(tabmain, hover=True, hover_color="forest green", width=280, height=50, fg_color="gray25",bg_color=colour, text=btn_text, text_color= "gray80", font=('Arial', 14,"bold"), corner_radius=8, command=seltab)
+    buttonclass = customtkinter.CTkButton(tabview.tab("Schedule"), hover=True, hover_color="forest green", width=280, height=50, fg_color="gray25",bg_color=colour, text=btn_text, text_color= "gray80", font=('Arial', 14,"bold"), corner_radius=8, command=seltab)
     buttonclass.pack(pady=(5,0), padx=0)
 
     
@@ -154,7 +174,12 @@ frame2.pack(pady=(5,0),padx=5,fill="both",expand=True)
 buttonmove = customtkinter.CTkButton(frame2, hover=True, hover_color="lime green", width=33, height=23, fg_color=colour1,bg_color=colour, text="◎", text_color= colour, font=('Arial', 14,"bold"), corner_radius=8)
 buttonmove.place(relx=0.0166, rely=0.15)
 
-buttonexit = customtkinter.CTkButton(frame2, hover=True, hover_color="red", width=33, height=23, fg_color=colour1,bg_color=colour, text="X", text_color= colour,font=('Arial', 12,"bold"), corner_radius=8, command=root.quit)
+def app_quit():
+    root.quit()
+    import excel_creator
+    
+
+buttonexit = customtkinter.CTkButton(frame2, hover=True, hover_color="red", width=33, height=23, fg_color=colour1,bg_color=colour, text="X", text_color= colour,font=('Arial', 12,"bold"), corner_radius=8, command=app_quit)
 buttonexit.place(relx=0.888, rely=0.15)
 
 dt_text=data[tdy_day]['day']+"  "+tdy_date
@@ -166,21 +191,7 @@ tabview.pack(padx=5, pady=(0,5), fill="both",expand=True)
 tabmain=tabview.add("Schedule")
 tabview.configure(state="disabled")
 
-
-if tdy_day != 6 :
-    for n, classes in enumerate(data_add[-1]['classes']):
-        section=classes['section']
-        time=classes['sch_time']
-        create_class(section,time,n)
-        tabview.set("Schedule")
-else:
-    for n, classes in enumerate(data_add[-1]['classes']):
-        if n!=0:
-            section=classes['section']
-            time=classes['sch_time']
-            create_class(section,time,n)
-            tabview.set("Schedule")
-
+schedule_create()
 
 def add_misc():
     tabn=tabview.add("New")
@@ -204,10 +215,39 @@ def add_misc():
                 json.dump(data_add, f, indent = 4)
                 f.truncate()
         tabview.delete("New")
+        tabview.delete("Schedule")
+        tabmain=tabview.add("Schedule")
+        with open(os.path.join(os.path.dirname(__file__),"classesdone.json"), 'r') as f:
+            data_add = json.load(f)
+            value=len(data_add[-1]["classes"])
+
+        if value > 4:
+            value = value-4
+        else:
+            value=0
+        tabview.configure(height=(340+(value*60)))    
+        if tdy_day != 6 :
+            for n, classes in enumerate(data_add[-1]['classes']):
+                section=classes['section']
+                time=classes['sch_time']
+                create_class(section,time,n)
+                tabview.set("Schedule")
+        else:
+            for n, classes in enumerate(data_add[-1]['classes']):
+                if n!=0:
+                    section=classes['section']
+                    time=classes['sch_time']
+                    create_class(section,time,n)
+                    tabview.set("Schedule")
+        buttonsavemsc = customtkinter.CTkButton(tabview.tab("Schedule"), hover=True, hover_color="forest green", width=280, height=50, fg_color=colour1,bg_color=colour, text="Add Misc class", text_color= "gray75", font=('Arial', 14,"bold"), corner_radius=8, command=add_misc)
+        buttonsavemsc.pack(pady=(5,0), padx=0)
+
+        tabview.configure(state="disabled")
 
 
     def new_exit():
         tabview.delete("New")
+        
 
 
     label_w = customtkinter.CTkLabel(tabn,text="Enter Class Details" ,font=('Arial', 16,"bold"))
@@ -241,10 +281,10 @@ def add_misc():
     buttonexit.pack(padx=2, pady=(0,0))
 
     tabview.set("New")
-   
-buttonsavemsc = customtkinter.CTkButton(tabmain, hover=True, hover_color="forest green", width=280, height=50, fg_color=colour1,bg_color=colour, text="Add Misc class", text_color= "gray75", font=('Arial', 14,"bold"), corner_radius=8, command=add_misc)
-buttonsavemsc.pack(pady=(5,0), padx=0)
 
+   
+buttonsavemsc = customtkinter.CTkButton(tabview.tab("Schedule"), hover=True, hover_color="forest green", width=280, height=50, fg_color=colour1,bg_color=colour, text="Add Misc class", text_color= "gray75", font=('Arial', 14,"bold"), corner_radius=8, command=add_misc)
+buttonsavemsc.pack(pady=(5,0), padx=0)
 
 def moveMouseButton(e):
    root.geometry(f'+{e.x_root}+{e.y_root}')

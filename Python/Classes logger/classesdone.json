@@ -123,6 +123,26 @@
         ]
     },
     {
+        "date": "04/02/2023",
+        "day": "Saturday",
+        "classes": [
+            {
+                "section": "Grade 12",
+                "cond": "",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "05/02/2023",
+        "day": "Sunday",
+        "classes": []
+    },
+    {
         "date": "06/02/2023",
         "day": "Monday",
         "classes": [
@@ -137,38 +157,62 @@
             },
             {
                 "section": "Grade 11",
-                "cond": "Y",
+                "cond": "",
                 "sch_time": "10:10 am to 11:10 am ",
-                "act_time": "10:45 am to 11:40 am",
-                "hours": "1:00",
-                "lesson": "test",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
                 "remarks": ""
             },
             {
                 "section": "Grade 5, Section F",
-                "cond": "Y",
+                "cond": "",
                 "sch_time": "12:05 pm to 1:05 pm ",
-                "act_time": "12:15 pm to 1:15 pm",
-                "hours": "1:00",
-                "lesson": "test",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
                 "remarks": ""
             },
             {
                 "section": "Grade 5, Section E",
-                "cond": "Y",
+                "cond": "",
                 "sch_time": "1:05 pm to 2:15 pm ",
-                "act_time": "1:15 pm to 2:35 pm",
-                "hours": "1:30",
-                "lesson": "test",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "07/02/2023",
+        "day": "Tuesday",
+        "classes": [
+            {
+                "section": "Grade 10, Section E",
+                "cond": "",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
                 "remarks": ""
             },
             {
-                "section": "Grade 8 ",
-                "cond": "Y",
-                "sch_time": "5:00 pm to 6:00 pm",
-                "act_time": "5:00 pm to 6:00 pm",
-                "hours": "1:00",
-                "lesson": "mit app invntor",
+                "section": "Grade 6, Section E",
+                "cond": "",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 4, Section E",
+                "cond": "",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
                 "remarks": ""
             }
         ]

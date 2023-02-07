@@ -61,7 +61,7 @@ def classes_sorted():
                 class_name=data[n+1]["classes"][m]["section"]
                 if class_name not in classes_list:
                     classes_list.append(class_name)
-    print(classes_list)
+
     classes_list=sorted(classes_list)
     ws['L'+'1'].value=" SUMMARY "
     ws['L'+'1'].font=Font(bold=True, size=12 )
