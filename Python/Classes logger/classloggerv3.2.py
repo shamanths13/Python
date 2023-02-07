@@ -150,8 +150,6 @@ def create_class(section, time,n):
     buttonclass.pack(pady=(5,0), padx=0)
 
     
-
-    
 frame=customtkinter.CTkFrame(root, fg_color=colour1,bg_color="black",corner_radius=8)
 frame.pack(pady=0,padx=0,fill="both",expand=True)
 
