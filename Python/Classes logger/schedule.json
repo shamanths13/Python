@@ -2,26 +2,7 @@
     {
         "day": "Monday",
         "classes": [
-            {   
-                "id": "1",
-                "section": "Grade 1, Section F",
-                "time": "9:00 am to 10:10 am "
-            },
-            {   
-                "id": "2",
-                "section": "Grade 11",
-                "time": "10:10 am to 11:10 am "
-            },
-            {   
-                "id": "3",
-                "section": "Grade 5, Section F",
-                "time": "12:05 pm to 1:05 pm "
-            },
-            {   
-                "id": "4",
-                "section": "Grade 5, Section E",
-                "time": "1:05 pm to 2:15 pm "
-            }
+            
         ]
     },
     {

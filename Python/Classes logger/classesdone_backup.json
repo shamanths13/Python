@@ -650,5 +650,29 @@
                 "remarks": ""
             }
         ]
+    },
+    {
+        "date": "02/02/2023",
+        "day": "Thursday",
+        "classes": [
+            {
+                "section": "dddd",
+                "cond": "",
+                "sch_time": "dd",
+                "act_time": "",
+                "hours": "2:10",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "dfdfddf",
+                "cond": "",
+                "sch_time": "",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
     }
 ]
