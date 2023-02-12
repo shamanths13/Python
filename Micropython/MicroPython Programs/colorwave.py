@@ -4,7 +4,7 @@
 import time
 from neopixel import Neopixel
 
-numpix = 30
+numpix = 180
 strip = Neopixel(numpix, 0, 26, "GRB")
 # strip = Neopixel(numpsix, 0, 0, "GRBW")
 
@@ -15,7 +15,8 @@ green = (0, 255, 0)
 blue = (0, 0, 255)
 indigo = (100, 0, 90)
 violet = (200, 0, 100)
-colors_rgb = [red, orange, yellow, green, blue, indigo, violet]
+cust_col1 = (255, 0, 10)
+colors_rgb = [red, orange, yellow, green, blue, indigo, violet, cust_col1]
 
 # same colors as normaln rgb, just 0 added at the end
 colors_rgbw = [color+tuple([0]) for color in colors_rgb]
@@ -26,7 +27,7 @@ colors = colors_rgb
 # colors = colors_rgbw
 
 
-step = round(numpix / len(colors))
+step = round(numpix/ len(colors))
 current_pixel = 0
 strip.brightness(50)
 
@@ -34,9 +35,9 @@ for color1, color2 in zip(colors, colors[1:]):
     strip.set_pixel_line_gradient(current_pixel, current_pixel + step, color1, color2)
     current_pixel += step
 
-strip.set_pixel_line_gradient(current_pixel, numpix - 1, violet, red)
+strip.set_pixel_line_gradient(current_pixel, numpix - 1, cust_col1, red)
 
 while True:
     strip.rotate_right(1)
-    time.sleep(0.15)
+    time.sleep(0.04)
     strip.show()
