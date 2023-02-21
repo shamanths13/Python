@@ -4,7 +4,7 @@
 import time
 from neopixel import Neopixel
 
-numpix = 180
+numpix = 120
 strip = Neopixel(numpix, 0, 26, "GRB")
 # strip = Neopixel(numpsix, 0, 0, "GRBW")
 
@@ -39,5 +39,6 @@ strip.set_pixel_line_gradient(current_pixel, numpix - 1, cust_col1, red)
 
 while True:
     strip.rotate_right(1)
-    time.sleep(0.05)
+    time.sleep(0.02)
     strip.show()
+
