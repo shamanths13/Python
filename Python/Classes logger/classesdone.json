@@ -157,29 +157,38 @@
             },
             {
                 "section": "Grade 11",
-                "cond": "",
+                "cond": "Y",
                 "sch_time": "10:10 am to 11:10 am ",
-                "act_time": "",
-                "hours": "",
-                "lesson": "",
+                "act_time": "10:45 am to 11:40 am",
+                "hours": "1:00",
+                "lesson": "test",
                 "remarks": ""
             },
             {
                 "section": "Grade 5, Section F",
-                "cond": "",
+                "cond": "Y",
                 "sch_time": "12:05 pm to 1:05 pm ",
-                "act_time": "",
-                "hours": "",
-                "lesson": "",
+                "act_time": "12:15 pm to 1:15 pm",
+                "hours": "1:00",
+                "lesson": "test",
                 "remarks": ""
             },
             {
                 "section": "Grade 5, Section E",
-                "cond": "",
+                "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
-                "act_time": "",
-                "hours": "",
-                "lesson": "",
+                "act_time": "1:15 pm to 2:35 pm",
+                "hours": "1:30",
+                "lesson": "test",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8 ",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm",
+                "act_time": "5:00 pm to 6:00 pm",
+                "hours": "1:00",
+                "lesson": "mit app invntor",
                 "remarks": ""
             }
         ]
@@ -199,6 +208,138 @@
             },
             {
                 "section": "Grade 6, Section E",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:10 am to 11:20 am",
+                "hours": "1:00",
+                "lesson": "test(sqroot)",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 4, Section E",
+                "cond": "Y",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "1:15 pm to 2:35 pm",
+                "hours": "1:30",
+                "lesson": "test(calc)",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "08/02/2023",
+        "day": "Wednesday",
+        "classes": [
+            {
+                "section": "Grade 3, Section E",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:10 am to 11:20 am",
+                "hours": "1:00",
+                "lesson": "test(even or odd)",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 6, Section F",
+                "cond": "Y",
+                "sch_time": "12:05 am to 1:05 am ",
+                "act_time": "12:15 pm to 1:15 pm",
+                "hours": "1:00",
+                "lesson": "test(sqrt)",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8, Section E",
+                "cond": "Y",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "1:15 pm to 2:35 pm",
+                "hours": "1:30",
+                "lesson": "test(python)",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8 Ridhant",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm",
+                "act_time": "",
+                "hours": "1:00",
+                "lesson": "Drawing app",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "09/02/2023",
+        "day": "Thursday",
+        "classes": [
+            {
+                "section": "Grade 9, Section E",
+                "cond": "",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 7, Section E",
+                "cond": "",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "10/02/2023",
+        "day": "Friday",
+        "classes": [
+            {
+                "section": "Grade 9, Section F",
+                "cond": "Y",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "9:00 am to 10:10 am",
+                "hours": "1:00",
+                "lesson": "test(story)",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 2, Section E",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:10 am to 11:10 am",
+                "hours": "1:00",
+                "lesson": "test(race)",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 4, Section F",
+                "cond": "Y",
+                "sch_time": "12:05 am to 1:05 am ",
+                "act_time": "12:15 pm to 1:15 pm ",
+                "hours": "1:00",
+                "lesson": "test(even or odd)",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8 Ridhant",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm",
+                "act_time": "5:00 pm to 6:00 pm",
+                "hours": "1:00",
+                "lesson": "drawing app, started with mole app",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "11/02/2023",
+        "day": "Saturday",
+        "classes": [
+            {
+                "section": "Grade 12",
                 "cond": "",
                 "sch_time": "10:10 am to 11:10 am ",
                 "act_time": "",
@@ -207,11 +348,464 @@
                 "remarks": ""
             },
             {
-                "section": "Grade 4, Section E",
-                "cond": "",
+                "section": "Figma",
+                "cond": "Y",
+                "sch_time": "11:00 am to 12:00 pm",
+                "act_time": "11:00 am to 12:00 pm",
+                "hours": "1:00",
+                "lesson": "Figma 1st class",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "12/02/2023",
+        "day": "Sunday",
+        "classes": [
+            {
+                "section": "Figma",
+                "cond": "Y",
+                "sch_time": "11:00 am to 12:00 pm",
+                "act_time": "11:00 am to 12:00 pm",
+                "hours": "1:00",
+                "lesson": "Figma",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "13/02/2023",
+        "day": "Monday",
+        "classes": [
+            {
+                "section": "Grade 1, Section F",
+                "cond": "Y",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "9:00 am to 10:10 am",
+                "hours": "1:00",
+                "lesson": "test(power cut so didnt do practicals)",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 11",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:10 am to 11:20 am",
+                "hours": "1:00",
+                "lesson": "Test(story)",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 5, Section F",
+                "cond": "Y",
+                "sch_time": "12:05 pm to 1:05 pm ",
+                "act_time": "12:15 pm to 1:15 pm",
+                "hours": "1:00",
+                "lesson": "AI chat bot",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 5, Section E",
+                "cond": "Y",
                 "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "1:15 pm to 2:35 pm",
+                "hours": "1:30",
+                "lesson": "AI chat bot",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8 Ridhant",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm",
+                "act_time": "6:00 pm to 7:00 pm",
+                "hours": "1:00",
+                "lesson": "Paint pot and Hello purr",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "14/02/2023",
+        "day": "Tuesday",
+        "classes": [
+            {
+                "section": "Grade 10, Section E",
+                "cond": "",
+                "sch_time": "9:00 am to 10:10 am ",
                 "act_time": "",
                 "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 6, Section E",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:10 am to 11:20 am",
+                "hours": "1:00",
+                "lesson": "probability",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 4, Section E",
+                "cond": "Y",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "1:15 pm to 2:35 pm",
+                "hours": "1:30",
+                "lesson": "",
+                "remarks": "school tech issues, stayed in the meeting throughout"
+            }
+        ]
+    },
+    {
+        "date": "15/02/2023",
+        "day": "Wednesday",
+        "classes": [
+            {
+                "section": "Grade 3, Section E",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:10 am to 11:20 am",
+                "hours": "1:00",
+                "lesson": "mouse and cheese game",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 6, Section F",
+                "cond": "Y",
+                "sch_time": "12:05 am to 1:05 am ",
+                "act_time": "12:15 pm to 1:15 pm",
+                "hours": "1:00",
+                "lesson": "AI chat bot",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8, Section E",
+                "cond": "Y",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "1:15 pm to 2:35 pm",
+                "hours": "1:30",
+                "lesson": "text to speech",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8 Ridhant",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm",
+                "act_time": "6:00 pm to 7:00 pm",
+                "hours": "1:00",
+                "lesson": "paintpot",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "16/02/2023",
+        "day": "Thursday",
+        "classes": [
+            {
+                "section": "Grade 9, Section E",
+                "cond": "Y",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "9:00 am to 10:10 am",
+                "hours": "1:00",
+                "lesson": "test(story-py)",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 7, Section E",
+                "cond": "Y",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "1:15 pm to 2:35 pm",
+                "hours": "1:30",
+                "lesson": "test(html-ex&in)",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "17/02/2023",
+        "day": "Friday",
+        "classes": [
+            {
+                "section": "Grade 9, Section F",
+                "cond": "Y",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "9:00 am to 10:10 am",
+                "hours": "1:00",
+                "lesson": "rock, paper, scissors",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 2, Section E",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:10 am to 11:20 am",
+                "hours": "1:00",
+                "lesson": "moonrise, moon orbits earth",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 4, Section F",
+                "cond": "Y",
+                "sch_time": "12:05 am to 1:05 am ",
+                "act_time": "12:15 pm to 1:15 pm",
+                "hours": "1:00",
+                "lesson": "music",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8 Ridhant",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm",
+                "act_time": "6:00 pm to 7:00 pm",
+                "hours": "1:00",
+                "lesson": "mole mash full",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "18/02/2023",
+        "day": "Saturday",
+        "classes": [
+            {
+                "section": "Grade 12",
+                "cond": "",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Figma",
+                "cond": "Y",
+                "sch_time": "",
+                "act_time": "11:00 am to 12:00 pm",
+                "hours": "1:00",
+                "lesson": "swiggy sign up and login page",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "19/02/2023",
+        "day": "Sunday",
+        "classes": [
+            {
+                "section": "Figma",
+                "cond": "Y",
+                "sch_time": "11:00 am to 12:00 pm",
+                "act_time": "11:00 am to 12:00 pm",
+                "hours": "1:00",
+                "lesson": "figma",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "20/02/2023",
+        "day": "Monday",
+        "classes": [
+            {
+                "section": "Grade 1, Section F",
+                "cond": "",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 11",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:10 am t0 11:20 am",
+                "hours": "1:00",
+                "lesson": "Ai image to text",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 5, Section F",
+                "cond": "Y",
+                "sch_time": "12:05 pm to 1:05 pm ",
+                "act_time": "12:15 pm to 1:15 pm",
+                "hours": "1:00",
+                "lesson": "AI chat bot and translate and speech Ai",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 5, Section E",
+                "cond": "Y",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "1:15 pm to 2:35",
+                "hours": "1:30",
+                "lesson": "AI chat bot and translate and speech Ai",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8 Ridhant",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm",
+                "act_time": "6:00 pm to 7:00 pm",
+                "hours": "1:00",
+                "lesson": "molemash2",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "21/02/2023",
+        "day": "Tuesday",
+        "classes": [
+            {
+                "section": "Grade 10, Section E",
+                "cond": "",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "",
+                "hours": "",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 6, Section E",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:10 am to 11:20 am",
+                "hours": "1:00",
+                "lesson": "changes in matter: water",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 4, Section E",
+                "cond": "Y",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "1:15 pm to 2:35 pm",
+                "hours": "1:30",
+                "lesson": "plane and cloud animation",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "22/02/2023",
+        "day": "Wednesday",
+        "classes": [
+            {
+                "section": "Grade 1, Section F",
+                "cond": "Y",
+                "sch_time": "9:00 am to 10:10 am ",
+                "act_time": "",
+                "hours": "1:00",
+                "lesson": "",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 6, Section F",
+                "cond": "Y",
+                "sch_time": "10:10 am to 11:10 am ",
+                "act_time": "10:10 am to 11:20 am",
+                "hours": "1:00",
+                "lesson": "changes in matter: water",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8, Section E",
+                "cond": "Y",
+                "sch_time": "1:05 pm to 2:15 pm ",
+                "act_time": "1:15 pm to 2:35 pm",
+                "hours": "1:30",
+                "lesson": "plane and cloud animation",
+                "remarks": ""
+            },
+            {
+                "section": "Grade 8 Ridhant",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm ",
+                "act_time": "",
+                "hours": "1:00",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "23/02/2023",
+        "day": "Thursday",
+        "classes": [
+        ]
+    },
+    {
+        "date": "24/02/2023",
+        "day": "Friday",
+        "classes": [
+            {
+                "section": "Grade 8 Ridhant",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm ",
+                "act_time": "",
+                "hours": "1:00",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "25/02/2023",
+        "day": "Saturday",
+        "classes": [
+            {
+                "section": "Figma",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm ",
+                "act_time": "",
+                "hours": "1:00",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "26/02/2023",
+        "day": "Sunday",
+        "classes": [
+            {
+                "section": "Figma",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm ",
+                "act_time": "",
+                "hours": "1:00",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "27/02/2023",
+        "day": "Monday",
+        "classes": [
+            {
+                "section": "Grade 8 Ridhant",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm ",
+                "act_time": "",
+                "hours": "1:00",
+                "lesson": "",
+                "remarks": ""
+            }
+        ]
+    },
+    {
+        "date": "01/03/2023",
+        "day": "Wednesday",
+        "classes": [
+            {
+                "section": "Grade 8 Ridhant",
+                "cond": "Y",
+                "sch_time": "5:00 pm to 6:00 pm ",
+                "act_time": "",
+                "hours": "1:00",
                 "lesson": "",
                 "remarks": ""
             }
