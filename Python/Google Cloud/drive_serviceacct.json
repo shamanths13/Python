@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "elegant-tangent-377207",
+  "private_key_id": "3cc940ad87eb98879ce3678d67895cc7fd9c32a3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCMLjbBGZmjJnMT\ntipQJB79kjo00Nguzvr6fp+Ri6UWQgkYdfvc7zyXvXe7iAMg9wBNBpF6BqRSQnbI\nC30XgNzXqh5jfFKGMI5xaqAlHAW60J9zrtKvDZLVVZMPBe6SeoG9Hw5KJ21HRo1Y\na7tV0eUdbm61kH3U5YyXyQgR+phmdf8xYwvaqBia22YhvTAnZr7sOv2WwKODbkvR\nzQYWTwShG+t4v6RDsFgR9UbmmKYs0sUS16Sr7nDRdDTHnRDVJLVnDl1StZmD8gOd\nKLPOz5gBu1yAYb3ZPHuNRfD6NlzscYP78xLtY2FCudFRcc0irmzg0FNR15PmT06h\nQOwA2fG1AgMBAAECggEAGctxOOQ4kLyFBXYKYDfdWgS74Dcj6K0eotSFEVe0d52M\nJeuj/nopWLS9IQ18oebBr+rK/zzUpOxlBheTG62TNb4wnFbmqpmpxHX95QY8ia1V\nAgkD7MFfKRF3n5aUWXDgicf6rauGoMx7Ou+MB9U5R0qoZZGijff1gIK2EPTfcU70\neSX48/D3f8kYqN7XQ5J34TGD7mkZ9qgNvgpdnEq8KNxyreonUdij7WbAHXjX6cTJ\ndAxHt4Xin6cneJUWCWYdL40xVjPETvLMqAZuvOChZverAIZFs8+KLMv7MUw7g6PU\nubnsou8ySLqX/RiJzR1pc4aC4oyUmYOpFo7XEk+40QKBgQDC3xYAf4mEMvnJz7Qh\nIOKBNrrKdYlXmKnPyAPKSrrHAKiqSqLPyY4/DAvDOEtR8VlD9xEjJudsT8fuGo4u\ny096XdszYXO/ALUhhqjQXlbXz0QVTGbHaKEzUvMVSE57z2yQRBrSEFWJPDD23/nA\n4srY5FWopobLI4woiEzbz53GSQKBgQC4Jz2vBrfj4Nuq/WC3mXaHWzsJN2t9C0G4\nwlc24KltaLwefxHGmsL4C10vkgxiWLu4eY5c13mf+DRjTAtrlgfTcHzWl7RTZDCB\nRTXGkAT3hqplX+qnmNbZMqV6Y996HhAUEYpx3GORnRN6h9/l1YgjAEpXxbPqixNV\n8OBUOZ/gDQKBgCqaizzgpTf5zRKKDl+PyPVm+b95ouU7wyRiHjID1IHdawKP/rhe\n4HJ4N7oefJkVouZxBZYh00aiypsLwzoHyQB/tISvMZb4mKETx6SGe4YDEmd1pKLE\nBTorUGm+vSnkV1/TA+oZGBpAxpOys++vpZl1kiSlA6M1ylayNdt4sI3BAoGBAJn3\nZSFTUqhaNg9ObXDUBD/DTSa1iU8w/DAHfHfLepyZNr+gqjIM7voINk8xot0PJ1Rj\nfV2uYmgXU2W6DMpU1BI6OIYKrKAUYmGShhWQEDcMBqdffIfHx8otCCG+Ivis7fB5\ngfEUvMLgO4r004QL9hidg4rDJ1vwD6iJDmYdD8h5AoGAUaW6v46Tewh1GHjPa1Hy\nZvtX8cDxH0rT+4qPufVz7K5Pp7O0A/+C0KcAABpFFDk6eG19RoeNQwMEhEZYJX7e\nL1mVofC2aGNhwUzneLtDQbecZ0gncvRLoClQepQSX3qOlGYVffrs69/iFEutZcUw\nopHgBtA7wRZ9/C2lX5Xw8vE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "googledriveserviceaccount@elegant-tangent-377207.iam.gserviceaccount.com",
+  "client_id": "101492944264399869653",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/googledriveserviceaccount%40elegant-tangent-377207.iam.gserviceaccount.com"
+}
